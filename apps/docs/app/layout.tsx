@@ -1,6 +1,5 @@
 import './global.css';
 import { Toaster } from 'sonner';
-import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { RootProvider } from 'fumadocs-ui/provider';
 import type { ReactNode } from 'react';
 import { ThemeProvider } from '../providers/theme';
@@ -19,7 +18,6 @@ const Layout = ({ children }: LayoutProps) => (
             {children}
           <Toaster />
         </RootProvider>
-        <VercelAnalytics />
       </ThemeProvider>
     </body>
   </html>
