@@ -18,7 +18,7 @@ export const Installer = ({ packageName }: InstallerProps) => {
     },
     shadcn: {
       image: shadcn,
-      code: `npx shadcn@latest add https://www.rcui.vercel.com/registry/${packageName}.json`,
+      code: `npx shadcn@latest add https://rcui.vercel.app/registry/${packageName}.json`,
     },
   };
 
