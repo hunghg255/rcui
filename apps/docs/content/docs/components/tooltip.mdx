@@ -12,3 +12,20 @@ icon: Scroll
 ## Installation
 
 <Installer packageName="tooltip" />
+
+## Preview
+
+<Preview name="tooltip" code={`'use client';
+
+import { Tooltip } from '@/components/ui/rcui/tooltip';
+
+const Example = () => {
+
+  return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <Tooltip placement='top' overlay='Tooltip Content'>
+      <span>Hover</span>
+    </Tooltip>
+  </div>
+};
+
+export default Example;`} />

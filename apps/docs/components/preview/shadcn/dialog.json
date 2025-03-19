@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "homepage": "https://rcui.vercel.app/dialog",
+  "name": "dialog",
+  "type": "registry:ui",
+  "author": "hunghg255 <giahung197bg@gmail.com>",
+  "registryDependencies": [],
+  "dependencies": [
+    "rc-dialog"
+  ],
+  "devDependencies": [],
+  "files": [
+    {
+      "type": "registry:ui",
+      "path": "index.tsx",
+      "content": "import type { DialogProps } from 'rc-dialog'\nimport Dialog from 'rc-dialog'\n\nimport './styles.css'\n\ninterface ModalProps extends DialogProps {}\n\nfunction Modal(props: ModalProps) {\n  return (\n    <Dialog\n      animation=\"zoom\"\n      maskAnimation=\"fade\"\n      {...props}\n    >\n      {props?.children && props.children}\n    </Dialog>\n  )\n}\n\nexport type { ModalProps }\nexport { Modal }\nexport default Modal\n",
+      "target": "components/ui/rcui/dialog/index.tsx"
+    },
+    {
+      "type": "registry:ui",
+      "path": "styles.css",
+      "content": ".rc-dialog {\n  position: relative;\n  width: auto;\n  margin: 10px;\n}\n.rc-dialog-wrap {\n  position: fixed;\n  overflow: auto;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1050;\n  -webkit-overflow-scrolling: touch;\n  outline: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.rc-dialog-title {\n  margin: 0;\n  font-size: 14px;\n  line-height: 21px;\n  font-weight: bold;\n}\n.rc-dialog-content {\n  position: relative;\n  background-color:  hsl(var(--background));\n  border: 1px solid hsl(var(--border));\n  background-clip: padding-box;\n  border-radius: var(--radius);\n}\n.rc-dialog-close {\n  cursor: pointer;\n  padding: 0;\n  border: 0;\n  background: transparent;\n  font-size: 21px;\n  position: absolute;\n  right: 20px;\n  top: 18px;\n  z-index: 3;\n}\n.rc-dialog-body {\n  padding: 40px;\n  @media (max-width: 768px) {\n    padding: 32px 15px;\n  }\n}\n.rc-dialog-header {\n  padding: 13px 20px 14px 20px;\n  border-radius: 5px 5px 0 0;\n  background: #fff;\n  color: #666;\n  border-bottom: 1px solid hsl(var(--border));\n}\n.rc-dialog-footer {\n  border-top: 1px solid hsl(var(--border));\n  padding: 10px 20px;\n  text-align: right;\n  border-radius: 0 0 5px 5px;\n}\n.rc-dialog-zoom-enter,\n.rc-dialog-zoom-appear {\n  opacity: 0;\n  animation-duration: 0.2s;\n  animation-fill-mode: both;\n  animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);\n  animation-play-state: paused;\n}\n.rc-dialog-zoom-leave {\n  animation-duration: 0.2s;\n  animation-fill-mode: both;\n  animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);\n  animation-play-state: paused;\n}\n.rc-dialog-zoom-enter.rc-dialog-zoom-enter-active,\n.rc-dialog-zoom-appear.rc-dialog-zoom-appear-active {\n  animation-name: rcDialogZoomIn;\n  animation-play-state: running;\n}\n.rc-dialog-zoom-leave.rc-dialog-zoom-leave-active {\n  animation-name: rcDialogZoomOut;\n  animation-play-state: running;\n}\n@keyframes rcDialogZoomIn {\n  0% {\n    opacity: 0;\n    transform: scale(0, 0);\n  }\n  100% {\n    opacity: 1;\n    transform: scale(1, 1);\n  }\n}\n@keyframes rcDialogZoomOut {\n  0% {\n    transform: scale(1, 1);\n  }\n  100% {\n    opacity: 0;\n    transform: scale(0, 0);\n  }\n}\n.rc-dialog {\n  width: 100%;\n  max-width: 620px;\n}\n.rc-dialog-mask {\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background-color: rgba(0,0,0,.8);\n  height: 100%;\n  filter: alpha(opacity=50);\n  z-index: 1050;\n}\n.rc-dialog-mask-hidden {\n  display: none;\n}\n.rc-dialog-fade-enter,\n.rc-dialog-fade-appear {\n  opacity: 0;\n  animation-duration: 0.2s;\n  animation-fill-mode: both;\n  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);\n  animation-play-state: paused;\n}\n.rc-dialog-fade-leave {\n  animation-duration: 0.2s;\n  animation-fill-mode: both;\n  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);\n  animation-play-state: paused;\n}\n.rc-dialog-fade-enter.rc-dialog-fade-enter-active,\n.rc-dialog-fade-appear.rc-dialog-fade-appear-active {\n  animation-name: rcDialogFadeIn;\n  animation-play-state: running;\n}\n.rc-dialog-fade-leave.rc-dialog-fade-leave-active {\n  animation-name: rcDialogFadeOut;\n  animation-play-state: running;\n}\n@keyframes rcDialogFadeIn {\n  0% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@keyframes rcDialogFadeOut {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n",
+      "target": "components/ui/rcui/dialog/styles.css"
+    }
+  ]
+}

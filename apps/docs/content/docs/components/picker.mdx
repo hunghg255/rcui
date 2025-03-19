@@ -12,3 +12,95 @@ icon: Calendar
 
 <Installer packageName="picker" />
 
+## Preview
+
+<Preview name="picker" code={`'use client';
+
+import { Picker, PickerPanel, RangePicker } from '@/components/ui/rcui/picker';
+import enUS from 'rc-picker/lib/locale/en_US';
+import 'dayjs/locale/vi';
+
+const Example = () => {
+  function disabledDate(current: any) {
+    // Can not select days before today and today
+    return current && current.valueOf() < Date.now();
+  }
+
+  return <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', gap: 20, alignItems: 'center', padding: 50 }}>
+    <Picker
+      locale={enUS}
+      format='DD/MM/YYYY'
+      onChange={(v) => {
+        console.log(v);
+      }}
+      suffixIcon={<span>suffix</span>}
+    />
+
+    <Picker locale={enUS} picker='week' />
+    <Picker locale={enUS} picker='month' />
+    <Picker locale={enUS} picker='quarter' />
+    <Picker locale={enUS} picker='year' />
+
+    <Picker locale={enUS} picker='time' />
+
+    <div>
+      <RangePicker
+        locale={enUS}
+        disabledDate={disabledDate}
+        onChange={(v) => {
+          console.log(v);
+        }}
+      />
+      <br />
+      <RangePicker
+        showTime
+        locale={enUS}
+        disabledDate={disabledDate}
+        onChange={(v) => {
+          console.log(v);
+        }}
+      />
+    </div>
+    <PickerPanel
+      locale={enUS}
+      disabledDate={disabledDate}
+      onChange={(v) => {
+        console.log('a', v);
+      }}
+    />
+
+    <div
+      style={{
+        maxWidth: 300,
+        margin: '0 auto',
+      }}
+    >
+      <Picker
+        multiple
+        locale={enUS}
+        onChange={(v) => {
+          console.log(v);
+        }}
+      />
+      <Picker
+        multiple
+        maxTagCount='responsive'
+        locale={enUS}
+        onChange={(v) => {
+          console.log(v);
+        }}
+      />
+    </div>
+    <div>
+      <Picker
+        showTime
+        locale={enUS}
+        onChange={(v) => {
+          console.log(v);
+        }}
+      />
+    </div>
+  </div>
+};
+
+export default Example;`} />

@@ -11,3 +11,55 @@ icon: SquareMenu
 ## Installation
 
 <Installer packageName="select" />
+
+## Preview
+
+<Preview name="select" code={`'use client';
+
+import { Select } from '@/components/ui/rcui/select';
+
+const options = [];
+
+for (let i = 10; i < 36; i++) {
+  options.push({
+    value: i.toString(36) + i,
+    label: i.toString(36) + i,
+  });
+}
+
+const Example = () => {
+
+  return <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', gap: 20, alignItems: 'center', height: '100vh', padding: 50 }}>
+    <Select
+      defaultValue='lucy'
+      style={{ width: 120 }}
+      options={[
+        { value: 'jack', label: 'Jack' },
+        { value: 'lucy', label: 'Lucy' },
+        { value: 'Yiminghe', label: 'yiminghe' },
+        { value: 'disabled', label: 'Disabled', disabled: true },
+      ]}
+    />
+    <Select
+      defaultValue='lucy'
+      style={{ width: 120 }}
+      disabled
+      options={[{ value: 'lucy', label: 'Lucy' }]}
+    />
+    <Select
+      defaultValue='lucy'
+      style={{ width: 120 }}
+      loading={true}
+      options={[{ value: 'lucy', label: 'Lucy' }]}
+    />
+    <Select
+      defaultValue='lucy'
+      style={{ width: 120 }}
+      allowClear
+      options={[{ value: 'lucy', label: 'Lucy' }]}
+    />
+    <Select mode='tags' style={{ width: '100%' }} tokenSeparators={[',']} options={options} />
+  </div>
+};
+
+export default Example;`} />

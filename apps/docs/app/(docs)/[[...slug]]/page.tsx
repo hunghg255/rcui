@@ -12,6 +12,7 @@ import { source } from '../../../lib/source';
 import { Header } from '../../../components/header';
 import { PoweredBy } from '../../../components/powered-by';
 import { Installer } from '../../../components/installer';
+import { Preview } from '../../../components/preview';
 
 type PageProps = {
   params: Promise<{ slug?: string[] }>;
@@ -43,7 +44,8 @@ const Page = async (props: PageProps) => {
               ...defaultMdxComponents,
               PoweredBy,
               AutoTypeTable,
-              Installer
+              Installer,
+              Preview
             }}
           />
         </DocsBody>

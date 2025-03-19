@@ -11,3 +11,23 @@ icon: Megaphone
 ## Installation
 
 <Installer packageName="dialog" />
+
+## Preview
+
+<Preview name="dialog" code={`'use client';
+
+import { useState } from 'react';
+import { Modal } from '@/components/ui/rcui/dialog';
+
+const Example = () => {
+  const [visible, setVisible] = useState(false);
+
+  return <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', gap: 20, alignItems: 'center', padding: 50 }}>
+    <button onClick={() => setVisible(true)}>Click</button>
+    <Modal visible={visible} onClose={() => setVisible(false)}>
+      <div style={{ padding: 10, color: 'white', background: 'green' }}>Content</div>
+    </Modal>
+  </div>
+};
+
+export default Example;`} />
