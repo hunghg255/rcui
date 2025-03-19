@@ -20,7 +20,7 @@ for (const packageName of packageNames) {
 
   const url = new URL(
     `registry/${packageName}.json`,
-    'https://www.rcui.vercel.app'
+    'https://rcui.vercel.app'
   );
 
   execSync(`npx shadcn@latest add ${url.toString()}`);

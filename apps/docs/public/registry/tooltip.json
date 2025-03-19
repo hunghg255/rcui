@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "homepage": "https://www.rcui.vercel.app/tooltip",
+  "homepage": "https://rcui.vercel.app/tooltip",
   "name": "tooltip",
   "type": "registry:ui",
   "author": "hunghg255 <giahung197bg@gmail.com>",

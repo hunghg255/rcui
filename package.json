@@ -1,7 +1,7 @@
 {
   "name": "rcui-cli",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A collection of React components",
   "packageManager": "pnpm@8.15.9",
   "sideEffects": false,
@@ -17,6 +17,8 @@
     "build": "turbo build",
     "predev": "pnpm run prebuild",
     "dev": "turbo dev",
+    "build-cli": "tsup",
+    "build-registry": "esno scripts/build-registry",
     "test": "turbo test",
     "analyze": "turbo analyze",
     "bump-deps": "npx npm-check-updates --deep -u -x react-day-picker && pnpm install",
@@ -89,11 +91,11 @@
     "tiptap-react-rc-rich-text"
   ],
   "author": "hunghg255 <giahunghust@gmail.com>",
-  "homepage": "https://github.com/hunghg255/rc-ui#readme",
+  "homepage": "https://github.com/hunghg255/rcui#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hunghg255/rc-ui.git",
+    "url": "git+https://github.com/hunghg255/rcui.git",
     "directory": "packages/transformers"
   },
-  "bugs": "https://github.com/hunghg255/rc-ui/issues"
+  "bugs": "https://github.com/hunghg255/rcui/issues"
 }

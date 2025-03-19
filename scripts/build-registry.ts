@@ -67,7 +67,7 @@ const buildRegistry = async (pkg: string) => {
   const json = JSON.stringify(
     {
       $schema: 'https://ui.shadcn.com/schema/registry.json',
-      homepage: `https://www.rcui.vercel.app/${pkg}`,
+      homepage: `https://rcui.vercel.app/${pkg}`,
       name: pkg,
       type: 'registry:ui',
       author: 'hunghg255 <giahung197bg@gmail.com>',
