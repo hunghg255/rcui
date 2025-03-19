@@ -1,7 +1,6 @@
 'use client';
 
 import type NextError from 'next/error';
-import { useEffect } from 'react';
 import { fonts } from './lib/fonts';
 
 type GlobalErrorProperties = {

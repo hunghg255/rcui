@@ -1,21 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "@repo/*": [
-        "../../packages/*"
-      ],
-      "@/components/*": [
-        "../../packages/shadcn-ui/components/*"
-      ],
-      "@/lib/*": [
-        "../../packages/shadcn-ui/lib/*"
-      ]
-    },
-    "target": "ES2017",
     "lib": [
       "dom",
       "dom.iterable",
@@ -23,20 +7,21 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "noEmit": true,
-    "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",

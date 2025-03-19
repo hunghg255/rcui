@@ -1,14 +1,14 @@
 import './global.css';
-import { ThemeProvider } from '@/providers/theme';
 import { Toaster } from 'sonner';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { RootProvider } from 'fumadocs-ui/provider';
 import type { ReactNode } from 'react';
-import { cn } from '@/app/lib/cn';
-import { fonts } from '@/app/lib/fonts';
+import { ThemeProvider } from '../providers/theme';
+import { fonts } from './lib/fonts';
+import { cn } from './lib/cn';
 
 type LayoutProps = {
-  readonly children: ReactNode;
+  readonly children: any;
 };
 
 const Layout = ({ children }: LayoutProps) => (
@@ -16,7 +16,7 @@ const Layout = ({ children }: LayoutProps) => (
     <body className={cn('flex min-h-screen flex-col', fonts)}>
       <ThemeProvider>
         <RootProvider>
-           {children}
+            {children}
           <Toaster />
         </RootProvider>
         <VercelAnalytics />
