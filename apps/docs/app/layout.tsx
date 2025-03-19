@@ -2,9 +2,10 @@ import './global.css';
 import { Toaster } from 'sonner';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { RootProvider } from 'fumadocs-ui/provider';
+import type { ReactNode } from 'react';
 import { ThemeProvider } from '../providers/theme';
-import { cn } from 'app/lib/cn';
-import { fonts } from 'app/lib/fonts';
+import { fonts } from './lib/fonts';
+import { cn } from './lib/cn';
 
 type LayoutProps = {
   readonly children: any;

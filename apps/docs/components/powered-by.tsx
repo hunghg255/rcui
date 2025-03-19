@@ -1,5 +1,5 @@
-import { cn } from 'app/lib/cn';
 import Image from 'next/image';
+import { cn } from '../app/lib/cn';
 
 type PoweredByProps = {
   packages: { name: string; url: string }[];

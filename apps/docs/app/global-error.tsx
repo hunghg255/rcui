@@ -1,7 +1,7 @@
 'use client';
 
-import { fonts } from 'app/lib/fonts';
 import type NextError from 'next/error';
+import { fonts } from './lib/fonts';
 
 type GlobalErrorProperties = {
   readonly error: NextError & { digest?: string };

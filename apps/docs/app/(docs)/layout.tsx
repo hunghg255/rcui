@@ -1,6 +1,6 @@
 import { DocsLayout } from 'fumadocs-ui/layouts/notebook';
-import { source } from 'lib/source';
 import Image from 'next/image';
+import { source } from '../../lib/source';
 
 type LayoutProps = {
   readonly children: any;
