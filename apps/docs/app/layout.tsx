@@ -4,8 +4,8 @@ import { Toaster } from 'sonner';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { RootProvider } from 'fumadocs-ui/provider';
 import type { ReactNode } from 'react';
-import { fonts } from './lib/fonts';
 import { cn } from '@/app/lib/cn';
+import { fonts } from '@/app/lib/fonts';
 
 type LayoutProps = {
   readonly children: ReactNode;
