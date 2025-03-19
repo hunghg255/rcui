@@ -1,5 +1,5 @@
 {
-  "name": "rc-ui",
+  "name": "rcui",
   "type": "module",
   "version": "0.0.1",
   "description": "A collection of React components",
@@ -9,12 +9,18 @@
   "engines": {
     "node": ">=18.0.0"
   },
+  "bin": {
+    "rcui": "dist/index.js"
+  },
+  "files": ["dist/index.js"],
   "scripts": {
-    "build": "pnpm --filter \"./packages/**\" build",
-    "build:dev": "pnpm --filter \"./packages/**\" dev",
+    "prebuild": "esno scripts/build-registry.ts",
+    "build": "tsup",
+    "predev": "pnpm run prebuild",
+    "bump-ui": "npx shadcn@latest add --all --overwrite -c packages/shadcn-ui",
     "docs": "pnpm -C docs run docs:dev",
-    "playground": "pnpm -C playground run dev",
-    "playground:build": "pnpm run build && pnpm -C playground run build",
+    "playground": "pnpm -C app/docs run dev",
+    "playground:build": "pnpm -C 'apps/docs' run build",
     "prepublishOnly": "pnpm build",
     "type-check": "tsc",
     "verify-commit": "verify-commit-msg",
@@ -54,6 +60,7 @@
     "react-dom": "^18.3.1",
     "sass": "^1.79.4",
     "taze": "^0.17.2",
+    "tsup": "^8.4.0",
     "typescript": "^5.6.2",
     "verify-commit-msg": "^0.0.14",
     "vite": "^5.4.8",

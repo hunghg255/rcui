@@ -1,75 +1,15 @@
 {
-  "name": "@rc-ui/picker",
-  "type": "module",
+  "name": "@rcui/picker",
   "version": "0.0.1",
-  "description": "rc ui picker",
-  "sideEffects": false,
-  "license": "MIT",
-  "main": "./lib/picker.cjs",
-  "module": "./lib/picker.js",
-  "types": "./lib/index.d.ts",
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./lib/index.d.ts",
-        "default": "./lib/picker.js"
-      },
-      "require": {
-        "types": "./lib/index.d.cts",
-        "default": "./lib/picker.cjs"
-      }
-    },
-    "./style.css": {
-      "import": "./lib/style.css",
-      "require": "./lib/style.css"
-    },
-    "./package.json": "./package.json"
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./*.js"
-      ],
-      "./style.css": [
-        "./lib/style.css"
-      ]
-    }
-  },
-  "files": [
-    "lib",
-    "package.json",
-    "README.md",
-    "LICENSE"
-  ],
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "scripts": {
-    "dev": "vite build  --mode development --watch",
-    "build": "vite build",
-    "prepublishOnly": "pnpm build"
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rc-picker": "latest",
+    "dayjs": "^1.11.13"
   },
   "devDependencies": {
-    "rc-picker": "latest",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "peerDependencies": {
-    "react": ">= 17.0.0",
-    "react-dom": ">= 17.0.0"
-  },
-  "keywords": [
-    "react"
-  ],
-  "author": "hunghg255 <giahunghust@gmail.com>",
-  "homepage": "https://github.com/hunghg255/rc-ui#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hunghg255/rc-ui.git",
-    "directory": "packages/transformers"
-  },
-  "bugs": "https://github.com/hunghg255/rc-ui/issues",
-  "dependencies": {
-    "dayjs": "^1.11.13"
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
   }
 }

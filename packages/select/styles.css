@@ -1348,7 +1348,6 @@ span.rc-select-arrow-icon.rc-select-arrow-loading-icon {
   border: 2px solid #999;
   border-top-color: transparent;
   transform: none;
-  margin-top: 4px;
   animation: rcSelectLoadingIcon 0.5s infinite;
 }
 
