@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-import{execSync as s}from"node:child_process";var e=process.argv.slice(2);(e.length<2||e[0]!=="add")&&(console.log("Usage: npx kibo-ui add [...packages]"),process.exit(1));var c=e.slice(1);for(let o of c){if(!o.trim())continue;console.log(`Adding ${o} component...`);let n=new URL(`registry/${o}.json`,"https://www.kibo-ui.com");s(`npx shadcn@latest add ${n.toString()}`)}
+import{execSync as o}from"node:child_process";var c=process.argv.slice(2);(c.length<2||c[0]!=="add")&&(console.log("Usage: npx rcui-cli add [...packages]"),process.exit(1));var s=c.slice(1);for(let e of s){if(!e.trim())continue;console.log(`Adding ${e} component...`);let n=new URL(`registry/${e}.json`,"https://www.rcui.vercel.app");o(`npx shadcn@latest add ${n.toString()}`)}

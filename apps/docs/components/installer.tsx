@@ -14,7 +14,7 @@ export const Installer = ({ packageName }: InstallerProps) => {
   const commands = {
     'rcui': {
       image: kibo,
-      code: `npx rcui@latest add ${packageName}`,
+      code: `npx rcui-cli@latest add ${packageName}`,
     },
     shadcn: {
       image: shadcn,

@@ -5,7 +5,7 @@ import { execSync } from 'node:child_process';
 const args = process.argv.slice(2);
 
 if (args.length < 2 || args[0] !== 'add') {
-  console.log('Usage: npx rcui add [...packages]');
+  console.log('Usage: npx rcui-cli add [...packages]');
   process.exit(1);
 }
 
