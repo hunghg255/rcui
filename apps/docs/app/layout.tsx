@@ -1,7 +1,6 @@
 import './global.css';
 import { Toaster } from 'sonner';
 import { RootProvider } from 'fumadocs-ui/provider';
-import type { ReactNode } from 'react';
 import { ThemeProvider } from '../providers/theme';
 import { fonts } from './lib/fonts';
 import { cn } from './lib/cn';
