@@ -14,21 +14,14 @@
   },
   "files": ["dist/index.js"],
   "scripts": {
-    "prebuild": "esno scripts/build-registry.ts",
-    "build": "tsup",
+    "build": "turbo build",
     "predev": "pnpm run prebuild",
+    "dev": "turbo dev",
+    "test": "turbo test",
+    "analyze": "turbo analyze",
+    "bump-deps": "npx npm-check-updates --deep -u -x react-day-picker && pnpm install",
     "bump-ui": "npx shadcn@latest add --all --overwrite -c packages/shadcn-ui",
-    "docs": "pnpm -C docs run docs:dev",
-    "playground": "pnpm -C app/docs run dev",
-    "playground:build": "pnpm -C 'apps/docs' run build",
-    "prepublishOnly": "pnpm build",
-    "type-check": "tsc",
-    "verify-commit": "verify-commit-msg",
-    "prepare": "git-scm-hooks",
-    "lint": "eslint . --cache",
-    "lint:fix": "eslint . --fix --quiet",
-    "release": "bumpp",
-    "publish:ci": "pnpm -r publish --access public --no-git-checks"
+    "clean": "git clean -xdf node_modules"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -63,8 +56,7 @@
     "tsup": "^8.4.0",
     "typescript": "^5.6.2",
     "verify-commit-msg": "^0.0.14",
-    "vite": "^5.4.8",
-    "vite-plugin-dts": "^4.2.3"
+    "turbo": "^2.4.4"
   },
   "browserslist": [
     ">0.3%",

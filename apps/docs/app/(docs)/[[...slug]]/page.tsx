@@ -8,10 +8,10 @@ import {
 } from 'fumadocs-ui/page';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { source } from '../../../lib/source';
 import { Header } from '../../../components/header';
 import { PoweredBy } from '../../../components/powered-by';
 import { Installer } from '../../../components/installer';
+import { source } from 'lib/source';
 
 type PageProps = {
   params: Promise<{ slug?: string[] }>;

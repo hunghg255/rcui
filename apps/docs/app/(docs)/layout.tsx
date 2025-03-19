@@ -1,10 +1,9 @@
 import { DocsLayout } from 'fumadocs-ui/layouts/notebook';
+import { source } from 'lib/source';
 import Image from 'next/image';
-import type { ReactNode } from 'react';
-import { source } from '../../lib/source';
 
 type LayoutProps = {
-  readonly children: ReactNode;
+  readonly children: any;
 };
 
 const Layout = ({ children }: LayoutProps) => (
